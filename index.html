@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Explorer</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <!-- Film strip decoration above title -->
+            <div class="filmstrip">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+            </div>
+            <h1>Movie Explorer</h1>
+            <p class="subtitle">Search millions of movies instantly</p>
+        </header>
+
+
+        <div class="search-box">
+
+            <span class="search-icon">🔍</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for a movie, series..."
+                autocomplete="off"
+            />
+
+            <!-- Calls searchMovies() in script.js when clicked -->
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <!-- STATUS MESSAGE -->
+        <p id="message"></p>
+
+        <!-- LOADING -->
+        <div id="skeletonGrid" class="movies hidden">
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+        </div>
+
+        <!-- MOVIES GRID -->
+        <div id="moviesContainer" class="movies"></div>
+
+        <!-- EMPTY / WELCOME STATE-->
+        <!-- Shown on first load before the user has searched anything -->
+        <div id="emptyState" class="empty-state">
+            <div class="empty-icon">🎬</div>
+            <p>Type a movie name above to get started</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
